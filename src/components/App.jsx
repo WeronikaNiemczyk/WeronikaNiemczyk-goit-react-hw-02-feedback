@@ -24,22 +24,14 @@ export const App = () => {
   };
   const countPositiveFeedbackPercentage = () => {
     const total = countTotalFeedback();
-    if (total === 0) {
-      return 0;
-    } else {
-      const positiveFeedback = (feedbackStats.good / total) * 100;
-      return Math.round(positiveFeedback);
-    }
+
+    const positiveFeedback = (feedbackStats.good / total) * 100;
+    return Math.round(positiveFeedback);
   };
   const isFeedback = countTotalFeedback() > 0;
   return (
     <>
-      <div
-        style={{
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}
-      >
+      <div>
         <Section title="Please leave feedback" />
         <FeedBackOptions
           onLeaveFeedback={onLeaveFeedback}
