@@ -1,5 +1,3 @@
-import css from './App.module.css';
-
 export const FeedBackOptions = ({ options, onLeaveFeedback }) => {
   return (
     <>
